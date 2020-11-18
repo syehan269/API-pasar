@@ -29,7 +29,13 @@ app.use(bodyParser.urlencoded(
 ));
 
 /* GET home page. */
-router.get('/', good.all);
+router.get('/view', good.all);
+
+router.get("/", (req, res) => {
+    res.status(200).send({
+        message: "api connected"
+    });
+});
 
 router.get('/good/:id', good.find);
 
