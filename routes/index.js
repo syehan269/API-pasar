@@ -11,6 +11,7 @@ const good = require("../controller/Goods");
 const router = express.Router();
 const app = express();
 
+//delete all table & create new one
 db.sequelize.sync({ force: true }).then(() => {
   console.log("all table recreated");
 });
@@ -37,5 +38,8 @@ router.post('/good', good.create);
 router.put('/good/:id', good.update);
 
 router.delete('/good/:id', good.delete);
+
+// TODO : buat new table "kategori"
+// TODO : buat api join good & kategori
 
 module.exports = router;

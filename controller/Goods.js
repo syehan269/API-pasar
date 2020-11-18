@@ -7,6 +7,7 @@ exports.all = (req, res) => {
         attributes: ['id','name','description']
     }).then(data => {
         res.send({
+            status: true,
             message: "get data success",
             data: data
         });
@@ -34,6 +35,7 @@ exports.create = (req, res) => {
     Good.create(good)
         .then(data => {
             res.send({
+                status: true,
                 message: "input data success",
                 data: data
             });
@@ -65,6 +67,7 @@ exports.update = (req, res) => {
     }).then(data => {
         if (data === 1) {
             res.send({
+                status: true,
               message: "data updated",
             });
         }else{
@@ -84,6 +87,7 @@ exports.find = (req, res) => {
     Good.findByPk(req.params.id)
         .then(data => {
             res.send({
+                status: true,
                 message: "data finded",
                 data: data
             });
@@ -102,6 +106,7 @@ exports.delete = (req, res) => {
         }
     }).then(() => {
         res.send({
+            status: true,
             message: "delete success"
         });
     })
