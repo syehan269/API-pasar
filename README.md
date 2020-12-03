@@ -1,5 +1,5 @@
-# Api-Pasar-Test
-Api sederhana yang dibuat dengan express.js
+# Api Pasar
+Rest API sederhana yang dibuat dengan express.js
 
 ## Instruksi:
 * buat database "pasar"
